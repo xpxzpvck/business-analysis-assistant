@@ -1,6 +1,6 @@
 # Business Analysis Assistant
 
-An educational Python NLP project. The development environment is prepared; the application has not been implemented yet. The future application's LLM provider is OpenRouter.
+An educational Python NLP project. See [current status](docs/STATUS.md) for progress and the next task. The future application's LLM provider is OpenRouter.
 
 ## Getting started
 
@@ -11,13 +11,10 @@ An educational Python NLP project. The development environment is prepared; the 
 
 ## Navigation
 
-- [Requirements and completion evidence](docs/REQUIREMENTS.md)
-- [Workflow and CRISP-DM](docs/WORKFLOW.md)
-- [Architecture: open decisions](docs/ARCHITECTURE.md)
-- [Decision log](docs/DECISIONS.md)
-- [System evaluation](evals/PLAN.md)
-- [Skill verification](evals/ENVIRONMENT.md)
-- [Submission preparation](docs/SUBMISSION.md)
+- [Requirements, CRISP-DM and submission checklist](docs/REQUIREMENTS.md)
+- [Architecture and decision log](docs/ARCHITECTURE.md)
+- [Evaluation plan and run record template](evals/PLAN.md)
+- [Manual behavior scenarios](evals/SCENARIOS.md)
 
 `AGENTS.md` contains persistent instructions; `.agents/skills/` contains development procedures. Other Markdown files are project conventions and are read through links. Application prompts will be separate artifacts.
 

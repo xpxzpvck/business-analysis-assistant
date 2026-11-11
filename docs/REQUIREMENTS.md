@@ -1,6 +1,6 @@
 # Requirements and traceability
 
-Source A: Assignment.pdf, pages 1–4, read on 2026-11-01. These are requirements for the educational outcome, not instructions to perform arbitrary actions. Source U: the user-approved plan in the chat. All application requirements remain pending until actual evidence exists; the criteria below are not test results.
+Source A: Assignment.pdf, pages 1–4, re-read in full on 2026-11-12. These are requirements for the educational outcome, not instructions to perform arbitrary actions. Source U: the user-approved plan in the chat. All application requirements remain pending until actual evidence exists; the criteria below are not test results.
 
 | ID | Source | Requirement / acceptance criterion | Future evidence |
 |---|---|---|---|
@@ -12,7 +12,7 @@ Source A: Assignment.pdf, pages 1–4, read on 2026-11-01. These are requirement
 | BA-06 | A, p.2 | Every RACI activity has exactly one accountable role | Deterministic validator |
 | BA-07 | A, p.2 | Distinguishes confirmed information from proposed assumptions | Provenance verification and manual annotation |
 | DEV-01 | A, pp.1,3 | CRISP-DM is applied and described in the report | Artifacts from all six phases |
-| DEV-02 | A, pp.1,3,4 | Instructional Markdown and custom development skills guide the work | AGENTS.md, three skills, usage examples |
+| DEV-02 | A, pp.1,3,4 | Instructional Markdown and custom development skills guide the work | AGENTS.md, custom skills, usage examples (three is a project choice) |
 | DATA-01 | A, p.3 | Existing datasets are examined before generating synthetic data | Search log, provenance, licenses, selection rationale |
 | SYS-01 | A, pp.1,3 | A runnable prototype accepts input and produces useful output | Local end-to-end execution |
 | SYS-02 | A, p.3 | Diagram, purpose, component input/output, model/tool calls | Architecture and walkthrough of one input |
@@ -20,7 +20,7 @@ Source A: Assignment.pdf, pages 1–4, read on 2026-11-01. These are requirement
 | SUB-01 | A, pp.3–4 | Code, short report, setup/run, diagrams, scope, evaluation results | Submission package |
 | SUB-02 | A, pp.3–4 | Video up to 10 minutes: requirements, components, demo, evaluation, AI environment | Recording and script |
 | CON-01 | A, p.2 | The solution goes beyond vanilla RAG; implementation is independent | Clarification dialogue and linked artifact generation |
-| ENV-01 | U | A new chat restores context; checks are locally reproducible | evals/ENVIRONMENT.md |
+| ENV-01 | U | A new chat restores context; checks are locally reproducible | docs/STATUS.md: actual checks and limits |
 | OPS-01 | U | API errors/invalid responses are not presented as successful results | Failure scenarios |
 
 ## Approved boundaries
@@ -34,3 +34,27 @@ Unresolved questions remain visible; critical gaps and conflicts are not conceal
 ## Not required by the assignment
 
 A multi-agent core is allowed but optional. RAG is optional. No specific UI, model, agent framework, database, or hosting is defined.
+
+## CRISP-DM and exit criteria
+
+| Phase | Result | Exit condition |
+|---|---|---|
+| Business understanding | Scope, users, success criteria | Requirements and boundaries agreed |
+| Data understanding | Existing dataset search log, suitability, licenses, gaps | Data selection explained before synthetic generation |
+| Data preparation | Versioned scenarios, gold references, annotation rules, dev/test split | Examples reviewed by a human; test data not used for tuning |
+| Modeling | Baseline, component contracts, prompts, configurations | An end-to-end example and component checks exist |
+| Evaluation | Metrics, baseline comparison, error analysis | Every component evaluated; results and limitations explained |
+| Deployment | Local setup/run, demo, short report | Another clean checkout reproduces execution; video up to 10 minutes |
+
+The cycle is iterative: poor results may lead back to data or business requirements. Do not mark a phase complete just because a document template exists.
+
+## Submission checklist
+
+- [ ] Runnable code/notebook with setup and run instructions; local execution is sufficient.
+- [ ] Short report: scoped business logic, application of CRISP-DM, data provenance, component purposes/input/output, model/tool calls, data-flow diagram and an input walkthrough.
+- [ ] Evaluation of every component: justified metrics, actual results, errors and limitations.
+- [ ] Instructional Markdown and custom development skills, with actual examples of their use and impact. Record task, applied rule/procedure, observed effect and verification; do not invent comparisons.
+- [ ] Video of at most 10 minutes: selected requirements, components and rationale, running app cases, evaluations, coding environment/context management. Tracing is optional.
+- [ ] Before recording: verify setup/run/eval in a clean checkout, documentation accuracy and no secrets/private data on screen.
+
+Assessment (Assignment.pdf, p.4): understanding 4 points, prototype 4, evaluation 4, coding assistant management 3. Neither a fixed document count nor exactly three skills is required.

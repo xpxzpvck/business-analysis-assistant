@@ -25,6 +25,23 @@ Separate development and held-out test before tuning. Version annotations. Agree
 
 ## Experiment record
 
-Use RUN_TEMPLATE.md. Record commit and dirty status, dataset/split version, component, model ID, prompt version/hash, parameters, command, date, raw counts, and metric denominators. Compare baseline/candidate on identical scenarios; explain changes. Do not turn API failures into omitted successful examples. For stochastic responses, report repeat count and variability; do not promise bitwise API reproducibility.
+Use the run record below. Record commit and dirty status, dataset/split version, component, model ID, prompt version/hash, parameters, command, date, raw counts, and metric denominators. Compare baseline/candidate on identical scenarios; explain changes. Do not turn API failures into omitted successful examples. For stochastic responses, report repeat count and variability; do not promise bitwise API reproducibility.
 
 Repeat relevant evaluations after model/prompt/component changes. Analyze false positives, false negatives, and unsupported claims. Sanitize public results; keep private traces in ignored evals/runs/private/.
+
+## Run record template
+
+Status: not run. Copy this template for an actual run; a template is not evidence.
+
+- Run ID / date / component / requirement IDs:
+- Commit / dirty status / code differences:
+- Dataset version / split / scenario IDs / repeats:
+- Provider / exact model ID / prompt version or hash / parameters:
+- Baseline run / candidate change:
+- Command / environment / duration / failures:
+- Results: metric, numerator, denominator, value, baseline delta:
+- Human rubric scores and explanations:
+- Error examples and likely causes:
+- Latency / usage / cost / missing telemetry:
+- Limitations / next experiment:
+- Reviewer:

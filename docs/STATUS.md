@@ -1,28 +1,25 @@
 # Current status
 
-Updated: 2026-11-02. Stage: AI environment preparation. Business understanding has started; other CRISP-DM phases are pending.
+Updated: 2026-11-12. Stage: AI environment preparation; application design is next. Business understanding has started; other CRISP-DM phases are pending.
 
 ## Completed
 
-- Git repository with initial commit `0cea36e` and origin configured as https://github.com/xpxzpvck/business-analysis-assistant.git; pushed to GitHub by the user.
-- AGENTS.md, three development skills, requirements with IDs/provenance, workflow, decision log.
-- Evaluation plan, nine manual scenarios, run template, report and video outline.
-- Read-only checker without third-party dependencies; skill desk-check in evals/ENVIRONMENT.md.
+- Consolidated content into seven core documents plus three repo-local skills (10 Markdown files total, previously 15).
+- Read all four pages of Assignment.pdf. Instructional Markdown, custom skills, CRISP-DM and component evaluation are required; document count and exactly three skills are not prescribed.
+- Decisions now live in ARCHITECTURE; CRISP-DM and submission checklist in REQUIREMENTS; run template in evals/PLAN. Preserved nine manual scenarios and updated navigation.
+- Removed current-task instructions from AGENTS and the checker's fixed document inventory. Verified the user-updated skills reference the consolidated sections directly; removed the three compatibility pointer files.
 
-## Checks
+## Checks and limits
 
-- `python scripts/check_environment.py`: PASS (artifacts, metadata, links, env example).
-- The same command in an isolated copy without .git: PASS; after removing STATUS.md from the copy - expected FAIL (exit 1). This checks a copy, not a Git checkout.
-- Initial scaffold verification: trailing whitespace check across all new Markdown/Python files passed. At that time, `git diff --check` exited 0 but did not check the then-untracked files.
-- Bundled quick_validate.py for all three skills: NOT RUN - ModuleNotFoundError: yaml (PyYAML is absent from both bundled and system Python). The custom checker verified only the simple metadata format, not full YAML validity.
-- Manual desk-check of skill procedures/boundaries: completed; automatic routing and independent execution are unverified.
+- `python scripts/check_environment.py`: PASS (entrypoint, simple metadata, local Markdown links, empty env example).
+- `git diff --check`: PASS. Reviewed the diff and assignment coverage; no new untracked project files.
+- Additional isolated-copy negative check: NOT RUN; sandbox denied creating its AGENTS.md fixture in the temporary directory. No result claimed.
+- Historical checks (2026-11-01/02): checker passed; isolated-copy missing-file check behaved as expected; skill procedures were desk-checked only, not independently executed.
+- Full YAML validation was previously unavailable because PyYAML was absent; the custom checker validates only simple metadata.
+- Fresh-chat automatic skill discovery and clean-checkout execution remain unverified. No application, dependency setup, API calls, dataset, NLP evaluation runs, runtime diagram, report or video yet.
 
 ## Next step
 
-Use $crisp-dm-step to complete Business understanding and agree on architecture: components/input/output, dialogue state, finalization, UI, OpenRouter model, error policy, and setup/run/test/eval commands. Criterion: approved design with a diagram, component-to-metric mapping, and a plan for the first end-to-end scenario. Implement the runtime afterward.
+Use $crisp-dm-step to complete Business understanding and agree application design: components/input/output, dialogue state, finalization, UI, model, error policy and executable setup/run/test/eval commands. Record choices in ARCHITECTURE with a diagram, component-to-metric mapping and first end-to-end scenario; then implement.
 
-Research datasets before synthetic generation (DATA-01). Agree on semantic metric thresholds after the development baseline, before the final test run.
-
-## Unverified / missing
-
-Fresh-chat discovery/routing and a clean checkout; application, dependencies, API calls, dataset, evaluation runs, runtime diagram, report, video. An API key is not currently needed. Created documents are not evidence that all phases or application requirements are complete.
+Research existing datasets before synthetic generation (DATA-01). Agree semantic thresholds after the development baseline and before final testing. No API key is needed for documentation work.

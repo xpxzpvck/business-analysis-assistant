@@ -4,11 +4,7 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-REQUIRED = ['AGENTS.md', 'README.md', '.env.example', '.gitignore', 'Assignment.pdf',
-            'docs/STATUS.md', 'docs/REQUIREMENTS.md', 'docs/ARCHITECTURE.md',
-            'docs/WORKFLOW.md', 'docs/DECISIONS.md', 'docs/SUBMISSION.md',
-            'evals/PLAN.md', 'evals/SCENARIOS.md', 'evals/RUN_TEMPLATE.md',
-            'evals/ENVIRONMENT.md']
+REQUIRED = ['AGENTS.md', '.env.example']
 SKILLS = ['crisp-dm-step', 'evaluate-component', 'review-deliverable']
 
 def main():
@@ -40,7 +36,7 @@ def main():
         print(f'FAIL: {error}')
     if errors:
         return 1
-    print('PASS: files, skill metadata, local Markdown links, empty env example')
+    print('PASS: entrypoint, simple skill metadata, local Markdown links, empty env example')
     print('NOT TESTED: automatic discovery/routing, application, API, NLP quality')
     return 0
 
