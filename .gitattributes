@@ -1,0 +1,4 @@
+# Keep LF everywhere: frozen source/prompt hashes must match on every checkout.
+* text=auto eol=lf
+*.png binary
+*.pdf binary
