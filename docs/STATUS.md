@@ -14,7 +14,7 @@ Updated: 2026-11-15. Working implementation is uncommitted. No deployment or pai
 
 | Check | Latest completed result |
 |---|---|
-| Fresh source copy, new uv environment | uv sync --frozen PASS; Python 3.13.15; not a committed-release checkout |
+| Clean GitHub clone (3e87cf5), new uv environment | uv sync --frozen, 144 pytest, Ruff, environment, dataset, LF freeze and Streamlit launch (HTTP 200) PASS; Python 3.13.15; Windows |
 | Latest regression suite | 144 passed in 11.16s (v3, after adapter revert); earlier fresh-copy run: 139 passed in 19.26s |
 | Ruff, environment and dataset checks | PASS; dataset has 8 dev / 4 reserved test cases |
 | Isolated Streamlit launch | HTTP 200; temporary process stopped; not visual browser QA |
@@ -49,7 +49,7 @@ Additional work: broader semantic evaluation; record video using the prepared sc
 - A limited component baseline now exists; no held-out/full-dataset semantic precision/recall, complete independent human document rubric or comparative model score. Evaluation checklist is satisfied at documented prototype-baseline scope, not as evidence of reliable NLP quality.
 - One generated document repeats some scope statements, omits explicit customer acceptance as a task and has incomplete task-source traceability. Structural validity does not prove semantic completeness.
 - Free models have produced 429, timeouts and malformed schema. Changes are regression-tested, not proven to eliminate live failures.
-- Session persistence is memory-only. Fresh Codex skill discovery, committed-release checkout and video recording remain unverified/incomplete.
+- Session persistence is memory-only. Fresh Codex skill discovery is unverified; video recording is outstanding.
 
 ## Where to continue
 
