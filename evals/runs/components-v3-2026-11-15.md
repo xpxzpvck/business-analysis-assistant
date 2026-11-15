@@ -38,7 +38,7 @@ Analyzer v3 SHA256: `9f5d323b614ac4756341e97ea7353a8a6860d39dd3f958c6c77e67f4c96
 
 ```powershell
 uv run --frozen python -m scripts.evaluate_components --generator-export "path/to/requirements.json"
-uv run --frozen python -m scripts.evaluate_components --split test --freeze-manifest evals/runs/v3-freeze-2026-11-15.json
+uv run --frozen python -m scripts.evaluate_components --split test --freeze-manifest evals/runs/v3-freeze-lf-2026-11-15.json
 ```
 
 Сирі результати лежать тільки локально в `evals/runs/private/` і не потрапляють у Git.
@@ -77,7 +77,8 @@ uv run --frozen python -m scripts.evaluate_components --split test --freeze-mani
 
 - Метрика рахує лише наявність категорій, а не семантичну відповідність фактів. Це не fact-level F1.
 - Вибірка: 3 dev + 4 test випадки, 1–3 повтори, різні моделі. Значущість різниці v2/v3 не оцінювалась.
-- Gold-розмітку всіх 12 випадків погодив автор. 9 із них, зокрема весь reserved test, — 15.11 уже після цього прогону. Мітки не змінювались, тому метрики вище чинні. Змінились лише метадані review, тож хеші gold у manifest тепер інші, ніж у цьому записі (dev `19ecb18f…`, test `19cc6202…`).
+- **Кінці рядків (виправлено 15.11 після прогонів).** Оригінальні freeze і хеші датасету рахувались на локальній копії Windows, де частина файлів мала CRLF. Git зберігає LF, тому чистий клон давав інші хеші, хоча вміст той самий. Перевірено, що всі 21 заморожений файл байтово збігаються з закоміченими з точністю до CRLF→LF. Зміни: додано `.gitattributes` (eol=lf), записано [v3-freeze-lf-2026-11-15.json](v3-freeze-lf-2026-11-15.json) і перераховано `manifest.json` датасету. Хеші промптів у LF: analyzer_v3 `3cf1ef4d…`, generator_v3 `0a6f5880…`. Хеші вище і в `results.json` — це CRLF-версії. Під час прогонів промпти надсилались моделі з CRLF; тепер надсилаються з LF. Зміст однаковий, але байтово це інший запит.
+- Gold-розмітку всіх 12 випадків погодив автор. 9 із них, зокрема весь reserved test, — 15.11 уже після цього прогону. Мітки не змінювались, тому метрики вище чинні. Змінились лише метадані review, тож хеші gold у manifest тепер інші, ніж у цьому записі (після LF-нормалізації: dev gold `50e0b045…`, test gold `a37606c7…`).
 - Test запускався один раз після freeze. Промпти після цього не змінювались, а відкат адаптера повертає саме той код, на якому зроблено вимірювання.
 - Регресія на поточному коді: 144/144 pytest, Ruff PASS (15.11.2026, після відкату).
 

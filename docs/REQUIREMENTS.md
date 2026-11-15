@@ -50,11 +50,12 @@ The cycle is iterative: poor results may lead back to data or business requireme
 
 ## Submission checklist
 
-- [x] Runnable code/notebook with setup and run instructions; local execution is sufficient. Fresh source-copy installation, 139 tests and server startup passed; see [check record](../evals/runs/submission-review-2026-11-15.md).
+- [x] Runnable code/notebook with setup and run instructions; local execution is sufficient. Clean clone from GitHub on 2026-11-15 (see [STATUS](STATUS.md)): uv sync --frozen, 144 tests, Ruff, environment/dataset/freeze checks and server startup passed. Earlier source-copy check: [record](../evals/runs/submission-review-2026-11-15.md).
 - [x] Short report: scoped business logic, application of CRISP-DM, data provenance, component purposes/input/output, model/tool calls, data-flow diagram and an input walkthrough. See [REPORT](REPORT.md); incomplete evaluation is explicitly disclosed.
-- [x] Evaluation of every component: justified metrics, actual results, errors and limitations. [Component baseline v2](../evals/runs/components-2026-11-15.md) and [v2 → v3 iteration](../evals/runs/components-v3-2026-11-15.md): 144 regression cases, error analysis → prompt changes → repeated dev runs and one frozen reserved-test run; errors included, v2 findings reviewed by the user. Limited evidence, not a passed NLP quality gate; test annotations still need human review.
+- [x] Evaluation of every component: justified metrics, actual results, errors and limitations. [Component baseline v2](../evals/runs/components-2026-11-15.md) and [v2 → v3 iteration](../evals/runs/components-v3-2026-11-15.md): 144 regression cases, error analysis → prompt changes → repeated dev runs and one frozen reserved-test run; errors included, v2 findings reviewed by the user. All 12 annotations human-reviewed. Limited evidence, not a passed NLP quality gate.
 - [x] Instructional Markdown and custom development skills, with actual examples of their use and impact. Concrete examples and limits are recorded in [REPORT](REPORT.md).
 - [ ] Video of at most 10 minutes: selected requirements, components and rationale, running app cases, evaluations, coding environment/context management. Tracing is optional.
-- [ ] Before recording: verify setup/run/eval in a clean checkout, documentation accuracy and no secrets/private data on screen.
+- [x] Clean-checkout setup/run/eval verified from GitHub on 2026-11-15.
+- [ ] Before recording: no secrets/private data on screen.
 
 Assessment (Assignment.pdf, p.4): understanding 4 points, prototype 4, evaluation 4, coding assistant management 3. Neither a fixed document count nor exactly three skills is required.

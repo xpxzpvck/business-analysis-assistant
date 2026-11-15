@@ -38,7 +38,7 @@ These checks need no API key. Tests use mocked responses and Streamlit AppTest. 
 
 For a bounded live development run, configure OPENROUTER_API_KEY in the environment or local ignored .env, then run `uv run --frozen python -m scripts.evaluate_components --generator-export "path/to/requirements.json"`. It makes at most four free-only calls: DEV-S02/03/06 plus one generation from the supplied confirmed facts. No automatic retries; raw results stay under ignored evals/runs/private. Gold is read only after inference. The runner explicitly reads .env; the application still takes its key through the UI.
 
-Held-out run (only against frozen sources): `uv run --frozen python -m scripts.evaluate_components --split test --freeze-manifest evals/runs/v3-freeze-2026-11-15.json`.
+Held-out run (only against frozen sources): `uv run --frozen python -m scripts.evaluate_components --split test --freeze-manifest evals/runs/v3-freeze-lf-2026-11-15.json`. The LF manifest has the same content as the original `v3-freeze-2026-11-15.json`, which hashed a working copy with CRLF line endings; `.gitattributes` now keeps LF on every checkout.
 
 Evaluation results:
 
