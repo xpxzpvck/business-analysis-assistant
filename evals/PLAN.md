@@ -1,6 +1,6 @@
 # Application evaluation
 
-Current evidence (2026-11-15): [v2 → v3 iteration](runs/components-v3-2026-11-15.md) — prompts changed from the user-approved v2 error findings, sources frozen, same dev cases repeated three times and the reserved test run once. Category-presence F1: dev 20% → 71.8% end-to-end (96.6% on successful calls), test 76.9%; generator 2/7 attempts fully valid. Provider availability (429/400/truncation) is now the main failure. Test gold and 5 dev annotations are not human-reviewed, so test numbers are provisional. [v2 baseline](runs/components-2026-11-15.md) is retained; failures are retained. Older baseline notes below describe earlier work.
+Current evidence (2026-11-15): [v2 → v3 iteration](runs/components-v3-2026-11-15.md) — prompts changed from the user-approved v2 error findings, sources frozen, same dev cases repeated three times and the reserved test run once. Category-presence F1: dev 20% → 71.8% end-to-end (96.6% on successful calls), test 76.9%; generator 2/7 attempts fully valid. Provider availability (429/400/truncation) is now the main failure. All 12 annotations are now user-approved (labels unchanged after the run). [v2 baseline](runs/components-2026-11-15.md) is retained; failures are retained. Older baseline notes below describe earlier work.
 
 Status: first [offline core baseline](runs/core-baseline-2026-11-15.md) executed; no model runs yet. Architecture P-001 is approved and maps the capabilities below to components. Structural baseline: 28 domain tests plus 7 dataset checks passed; this is not an NLP score.
 
@@ -8,7 +8,7 @@ The [provider adapter baseline](runs/adapter-baseline-2026-11-15.md) adds 34 moc
 
 The [prompt/workflow baseline](runs/workflow-baseline-2026-11-15.md) records prompt hashes and scripted multi-turn integration (80 total passing tests). Semantic prompt evaluation is not run; its development evaluation design is recorded there.
 
-Data preparation produced [draft corpus v0.1 and its review packet](data/README.md): 8 dev and 4 reserved test analyzer snapshots. The user approved representative interpretations for DEV-S02, DEV-S03 and DEV-S06 on 2026-11-12; nine annotations remain pending. `python scripts/check_dataset.py` checks data integrity only; it is not the planned NLP evaluation runner.
+Data preparation produced [draft corpus v0.1 and its review packet](data/README.md): 8 dev and 4 reserved test analyzer snapshots. The user approved representative interpretations for DEV-S02, DEV-S03 and DEV-S06 on 2026-11-12 and the remaining nine on 2026-11-15 without changes. `python scripts/check_dataset.py` checks data integrity only; it is not the planned NLP evaluation runner.
 
 | Capability | Evaluation |
 |---|---|

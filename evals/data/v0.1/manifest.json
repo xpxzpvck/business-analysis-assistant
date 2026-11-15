@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "status": "draft_partially_human_reviewed",
+  "status": "draft_human_reviewed",
   "created": "2026-11-12",
   "scope": "Analyzer snapshots only; no runtime state/artifact/API evaluation yet",
   "splits": {
@@ -23,9 +23,9 @@
     }
   },
   "files": {
-    "dev.gold.jsonl": "1a57ce0f3b838d7fd9334bd8556af9486e1fac9b41fe62d9586ef085a15877b0",
+    "dev.gold.jsonl": "19ecb18f71ba22e9d2878f36910e0053b9e68a7ab272a93995ed3a05981e5fab",
     "dev.inputs.jsonl": "6aaa2af0b537654cec53b46d30a4021092f2605366d4be25c14f395118cdcd47",
-    "test.gold.jsonl": "32f4935eabf40748db9855fd1a14b80f0d3a1269b2833bbf03790d37d8793420",
+    "test.gold.jsonl": "19cc6202718487c2a0ff7fcc0a9de950e66aed275dc15aa8fffb792396a7ed34",
     "test.inputs.jsonl": "1d468bd659abbb23e96037108bb8233ccf7d2fe5f11f7e5570cea4d6ea1b9184"
   }
 }

@@ -1,6 +1,6 @@
 # Draft evaluation corpus v0.1
 
-Status: 12 assistant-annotated snapshots; the user approved the representative interpretations for DEV-S02, DEV-S03 and DEV-S06 on 2026-11-12. Nine other annotations remain pending. This review is not an independent audit of every field or evidence offset. These are analyzer inputs and reference annotations, not application outputs or passing NLP results. Source research preceded synthetic creation; see [PLAN](../PLAN.md).
+Status: 12 assistant-annotated snapshots; the user approved DEV-S02, DEV-S03 and DEV-S06 on 2026-11-12 and the remaining nine on 2026-11-15 without changes. 0 annotations are pending. This review is not an independent audit of every field or evidence offset. These are analyzer inputs and reference annotations, not application outputs or passing NLP results. Source research preceded synthetic creation; see [PLAN](../PLAN.md).
 
 ## Files and use
 
@@ -53,7 +53,7 @@ Synthetic examples were authored by Codex on 2026-11-12 after DATA-01 research, 
 | DEV-S05 | Employees create requests; SSO is undecided | Keep the behavior; neither require nor reject SSO. |
 | DEV-S06 | Goal, actors, create/status-update workflows, status values, local network and delivery roles are supplied | All five categories present; status values are classified as constraints here. Facts remain unreviewed and finalization stays blocked. |
 
-Representative review received on 2026-11-12: the user explicitly approved DEV-S02 (user vs delivery role), DEV-S03 (blocking conflict), DEV-S06 (complete brief still needs explicit review). Only those three review records were updated. Annotation version remains 0.1 because inputs and semantic labels did not change; manifest hashes reflect review metadata changes. Other annotations remain pending. A full review of all 12 is needed before treating every annotation as trusted gold.
+Representative review received on 2026-11-12: the user explicitly approved DEV-S02 (user vs delivery role), DEV-S03 (blocking conflict), DEV-S06 (complete brief still needs explicit review). Only those three review records were updated. Annotation version remains 0.1 because inputs and semantic labels did not change; manifest hashes reflect review metadata changes. Review received on 2026-11-15: the user approved the remaining nine annotations (DEV-L01/L02/S01/S04/S05, TEST-S01–S04) without changes, after the v3 test run; labels were not adjusted to model outputs. Only review metadata and manifest hashes changed; annotation version stays 0.1.
 
 ## Split policy and limitations
 

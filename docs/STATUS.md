@@ -19,8 +19,8 @@ Updated: 2026-11-15. Working implementation is uncommitted. No deployment or pai
 | Ruff, environment and dataset checks | PASS; dataset has 8 dev / 4 reserved test cases |
 | Isolated Streamlit launch | HTTP 200; temporary process stopped; not visual browser QA |
 | One user-supplied generated export | 6/6 requirements covered; 9/9 valid task references; 7/7 valid specification references; 9/9 valid RACI |
-| v3 live evaluation | Dev category F1 71.8% end-to-end / 96.6% successful calls (v2: 20%); test 76.9% provisional; generator 2/7 fully valid. [Record](../evals/runs/components-v3-2026-11-15.md) |
-| Data annotation review | Three representative interpretations approved (DEV-S02/03/06); nine annotations pending |
+| v3 live evaluation | Dev category F1 71.8% end-to-end / 96.6% successful calls (v2: 20%); test 76.9% (gold reviewed, unchanged); generator 2/7 fully valid. [Record](../evals/runs/components-v3-2026-11-15.md) |
+| Data annotation review | All 12 approved by the user (DEV-S02/03/06 on 2026-11-12; remaining nine on 2026-11-15 without label changes); check_dataset: 0 pending |
 
 The supplied export is state 19; its original model/latency/confirmation history remain unknown. It was also used as a confirmed-fact input fixture in the separate controlled run below. Corrected Markdown apostrophes and RACI legend were inspected.
 
@@ -28,7 +28,9 @@ The supplied export is state 19; its original model/latency/confirmation history
 
 v2 → v3 iteration completed and documented (D-018, [run record](../evals/runs/components-v3-2026-11-15.md)). A post-freeze edit had removed `reasoning: {enabled: false}` from the free route; probes showed it makes a reasoning model spend 3901/4096 tokens and return empty content, so it was reverted with its test; sources match v3-freeze again (check_freeze PASS). Actual checks: 144 pytest passed, Ruff, environment, dataset and freeze checks PASS; one new official dev run (20261115T164858Z): analyzer 2/3 (DEV-S06 fast HTTP 400), generator success 6/6 · 8/8 · 8/8; three diagnostic generator probes recorded in the run record. Cause of fast HTTP 400 is still unknown (adapter does not keep provider error text by design). README, REPORT, ARCHITECTURE, PLAN, REQUIREMENTS and VIDEO updated; VIDEO narration grew by one paragraph and needs re-timing. Not committed.
 
-Next: human review of the nine pending annotations (4 reserved test + 5 dev) before test numbers go into the final report; commit and push; record video. Proposals needing user approval: pin one free model with 3 repeats per case for evaluation (changes D-016), safe provider error-code diagnostics, semantic fact matching / question rubric.
+Gold review completed 2026-11-15: the user approved all nine pending annotations without changes, including TEST-S01 (no facts) and TEST-S04 (booking requirement) where v3 erred; only review metadata and manifest hashes changed, so all metrics stand. test_dataset_checks now expects 0 pending; 144 pytest, Ruff, dataset and freeze checks PASS.
+
+Next: commit; record video. Proposals needing user approval: pin one free model with 3 repeats per case for evaluation (changes D-016), safe provider error-code diagnostics, semantic fact matching / question rubric.
 
 Report/video documentation updated: user-created system-architecture.png and requirements-workflow.png were visually inspected and embedded in REPORT with captions and abstraction notes. VIDEO now contains a full Ukrainian script targeting 9:40, exact screen actions, narration, example inputs, provider-failure alternatives and requirement coverage. Narration has 994 words including mutually exclusive variants; timing still requires rehearsal, not a claimed recorded duration. Used review-deliverable; environment/link checker and git diff --check PASS. Runtime unchanged; no tests/API rerun needed. Video recording remains outstanding.
 
@@ -38,7 +40,7 @@ Demo removal completed (D-017): deleted ba_assistant/demo.py, moved scripted res
 
 Pre-evaluation cleanup completed: simplified this status file and current architecture, removed contradictory outdated README guidance, extracted error-text formatting from app.py into ui_errors.py. Model/prompt/schema and application behavior unchanged. Baseline prompts, tests and run records are deliberate evaluation evidence, not redundant files. Actual checks: 139 tests passed in 12.35s, Ruff PASS, environment/link checker PASS, git diff --check PASS. Reviewed the new module and documentation using review-deliverable; no new live calls or quality claims.
 
-Additional work: finish the remaining nine annotation reviews and broader semantic evaluation; record video using the prepared script and the actual baseline, including failures.
+Additional work: broader semantic evaluation; record video using the prepared script and the actual baseline, including failures.
 
 ## Limits and unresolved quality issues
 

@@ -28,8 +28,8 @@ class DatasetChecks(unittest.TestCase):
         manifest["files"][filename] = hashlib.sha256(path.read_bytes()).hexdigest()
         manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
 
-    def test_current_draft_is_valid_and_partially_reviewed(self):
-        self.assertEqual(check_dataset(self.data), ({"dev": 8, "test": 4}, 9))
+    def test_current_draft_is_valid_and_fully_reviewed(self):
+        self.assertEqual(check_dataset(self.data), ({"dev": 8, "test": 4}, 0))
 
     def test_bad_evidence_is_rejected(self):
         self.change("dev.gold.jsonl", lambda rows: rows[0]["facts"][0]["evidence"][0].update(quote="invented"))

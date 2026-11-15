@@ -45,7 +45,7 @@ Evaluation results:
 | | v2 baseline | v3 |
 |---|---:|---:|
 | Analyzer category-presence F1, dev | 20% | 71.8% end-to-end, 96.6% on successful calls |
-| Analyzer category-presence F1, reserved test | — | 76.9% (provisional: gold not yet human-reviewed) |
+| Analyzer category-presence F1, reserved test | — | 76.9% (gold human-reviewed after the run, labels unchanged) |
 | Generated bundle passes all structural checks | 0/1 | 2/7 attempts |
 
 See the [v2 baseline](evals/runs/components-2026-11-15.md) and the [v2 → v3 iteration](evals/runs/components-v3-2026-11-15.md). These metrics check category presence, not semantic fact F1. The main remaining issue is free-route availability (429, fast HTTP 400, truncation).
