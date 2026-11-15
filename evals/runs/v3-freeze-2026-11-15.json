@@ -1,0 +1,26 @@
+{
+  "frozen_at": "2026-11-15T15:42:21.798779+00:00",
+  "sources": {
+    "ba_assistant/__init__.py": "ce3bac6747d752ec6c8c5dc16529b6efe03e7a23048fb8f74f0165d2a4ac6967",
+    "ba_assistant/exports.py": "fcf2c6590d714406d06c4555a82b15052092cb6ad00279ca5a73fcd5f74451eb",
+    "ba_assistant/models.py": "8617168b47e186ff0ca9816b80ae61c7ff45b9376a47977a54b20ab35fc35315",
+    "ba_assistant/openrouter.py": "1a29ec6fb7b0af228f0dd8657801d0d291b25bbc229661e0a55f4799f93d9f4f",
+    "ba_assistant/prompts/analyzer_v1.txt": "206bb74ff9822fcd7f9ff65fc7c1b4875882a908eb68ef391a8b437351ffe3a8",
+    "ba_assistant/prompts/analyzer_v2.txt": "d00670183f338161e438ecbd4d184a22e8f1e4359d4457fe1319cdc0e4fbb9b3",
+    "ba_assistant/prompts/analyzer_v3.txt": "9f5d323b614ac4756341e97ea7353a8a6860d39dd3f958c6c77e67f4c96cc3c0",
+    "ba_assistant/prompts/generator_v1.txt": "9812b93915c4ff72ef8788e29b1f844f6b99d0e89feaea7b86940e2db2c3a2af",
+    "ba_assistant/prompts/generator_v2.txt": "7ea8c337c89d6396932089dd655e7468627967b9857ea99914a7f9764c0b343a",
+    "ba_assistant/prompts/generator_v3.txt": "feaf554f1d595fccedd94b56512660f72d4612cc7e22963f357e8bb0a5d42ea6",
+    "ba_assistant/prompts/schema_repair_v1.txt": "0aababe51fdf5385606c88f21ed6ecf52b1cc5ee6d4986c3278b5ecb520a6a8f",
+    "ba_assistant/runtime.py": "fea5d37230f6b6bcb3a03207dd694394f00a4b112dcb38892af06ae59dd9aa59",
+    "ba_assistant/session.py": "00a4e2e8d836caa86c63017efa732c3837e9e1c0f7b33ee199a53c2e9a76d374",
+    "ba_assistant/ui_errors.py": "04072bbea4ba14fd3ec72099f1c938fa1d31e4b9870bba4c19126da3fd87b6fe",
+    "ba_assistant/validation.py": "6626e3dc18d055b5065bba2e745a0060f8a3e70c4e05771f58dd585493054780",
+    "ba_assistant/workflow.py": "7ac9559eb1082e36ddc586b45c47f5d6eab552690ea06c09a1db03f8a9e0f2f4",
+    "pyproject.toml": "9f3e524fa9c5d3c602924ff41e05ceb300124426d2fce8198bac8938c6e2d60a",
+    "scripts/check_dataset.py": "dcb3a0633702676ae31359156f5780286bf675e7d49ed93dd0fb8c656f8d305b",
+    "scripts/evaluate_components.py": "ccf9f2e6f6a5ebfd66cc06ab134d523b422a56919877b3d7ca15ae09d7a9cd28",
+    "scripts/evaluate_export.py": "f1412ffe5dd8df93d0d528f86acfaf763c663a3259c7a34cd9dd64a831f8c5c7",
+    "uv.lock": "92edec4b548ace347a4007c35f96c17463c5cd541f42e31c52b1f11ece120028"
+  }
+}

@@ -29,7 +29,7 @@ One developer, Python, OpenRouter, collaborative development with Codex. Complet
 
 ## Project-specific MVP rules (U)
 
-Unresolved questions remain visible; critical gaps and conflicts are not concealed by final documents. The model cannot confirm assumptions on the user's behalf. Model, prompt, and parameter changes must be linked to an evaluation run. Specific finalization rules, schemas, and numerical metric thresholds still require agreement.
+Unresolved questions remain visible; critical gaps and conflicts are not concealed by final documents. The model cannot confirm assumptions on the user's behalf. Model, prompt, and parameter changes must be linked to an evaluation run. The user approved P-001's finalization rules and contract design on 2026-11-12 (ARCHITECTURE, D-008). Numerical semantic thresholds remain subject to agreement after the development baseline and before held-out testing.
 
 ## Not required by the assignment
 
@@ -50,10 +50,10 @@ The cycle is iterative: poor results may lead back to data or business requireme
 
 ## Submission checklist
 
-- [ ] Runnable code/notebook with setup and run instructions; local execution is sufficient.
-- [ ] Short report: scoped business logic, application of CRISP-DM, data provenance, component purposes/input/output, model/tool calls, data-flow diagram and an input walkthrough.
-- [ ] Evaluation of every component: justified metrics, actual results, errors and limitations.
-- [ ] Instructional Markdown and custom development skills, with actual examples of their use and impact. Record task, applied rule/procedure, observed effect and verification; do not invent comparisons.
+- [x] Runnable code/notebook with setup and run instructions; local execution is sufficient. Fresh source-copy installation, 139 tests and server startup passed; see [check record](../evals/runs/submission-review-2026-11-15.md).
+- [x] Short report: scoped business logic, application of CRISP-DM, data provenance, component purposes/input/output, model/tool calls, data-flow diagram and an input walkthrough. See [REPORT](REPORT.md); incomplete evaluation is explicitly disclosed.
+- [x] Evaluation of every component: justified metrics, actual results, errors and limitations. [Component baseline v2](../evals/runs/components-2026-11-15.md) and [v2 → v3 iteration](../evals/runs/components-v3-2026-11-15.md): 144 regression cases, error analysis → prompt changes → repeated dev runs and one frozen reserved-test run; errors included, v2 findings reviewed by the user. Limited evidence, not a passed NLP quality gate; test annotations still need human review.
+- [x] Instructional Markdown and custom development skills, with actual examples of their use and impact. Concrete examples and limits are recorded in [REPORT](REPORT.md).
 - [ ] Video of at most 10 minutes: selected requirements, components and rationale, running app cases, evaluations, coding environment/context management. Tracing is optional.
 - [ ] Before recording: verify setup/run/eval in a clean checkout, documentation accuracy and no secrets/private data on screen.
 

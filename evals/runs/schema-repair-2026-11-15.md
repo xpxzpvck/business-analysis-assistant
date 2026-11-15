@@ -1,0 +1,10 @@
+# Explicit schema-repair retry — 2026-11-15
+
+User evidence: analyzer response rejected with two extra_forbidden errors; unknown property names were sanitized. No raw failed output was supplied, so exact fields and real correction success remain unknown.
+
+- Behavior: failed schema output is never committed or silently stripped. A later explicit retry of the identical request adds schema_repair_v1 instructions and, if available, the bounded failed output as untrusted JSON data. No immediate additional call occurs. For pre-update failures, the previous call record supplies a repair hint without a missing raw response.
+- Model/settings: approved Ling free, 4096 output tokens, reasoning disabled, one attempt per action, zero price filters unchanged. Analyzer/generator v1 unchanged. Repair prompt SHA256: `0aababe51fdf5385606c88f21ed6ecf52b1cc5ee6d4986c3278b5ecb520a6a8f`; hash recorded per call when used.
+- Data handling: only one failed response up to 64,000 characters retained in provider memory; request/schema fingerprint prevents reuse for another input. It survives normal UI reruns, is consumed on the next call and cleared on reset/key replacement. Not included in transcript, exports, exception text or public records. No credential is added to repair data. The original provider receives its own previous output on explicit retry.
+- Evaluation: structural mocked cases verify rejection of extra confirmation fields, one request before retry, repair after rerun, exact input isolation, safe metadata, no auto-confirmation/duplicate user message, and pre-update failure recovery. These do not establish semantic quality or injection resistance.
+- Actual final checks: 124 tests passed; Ruff PASS. Baseline: 121 passing. Initial added test mistakenly searched for the repair-envelope name even inside the instruction describing it; corrected assertion to verify message count/roles, then reran full suite.
+- Live recovery NOT RUN. Next: one explicit retry of the user's pending turn, assess schema acceptance and evidence fidelity. Keep strict domain checks; do not infer improved NLP quality from scripted successful replies. Held-out data untouched.

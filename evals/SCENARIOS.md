@@ -1,6 +1,6 @@
 # Initial scenarios (manual fixtures)
 
-These examples describe expected behavior; no automated harness or results exist yet.
+These examples describe expected behavior. Offline domain checks implement structural fixtures for S06/S07 and parts of review/finalization behavior in `tests/test_domain.py`; see [the core baseline](runs/core-baseline-2026-11-15.md). S08 HTTP/retry cases now have [mocked adapter evidence](runs/adapter-baseline-2026-11-15.md). Semantic scenarios and live provider behavior are not evaluated yet.
 
 | ID | Input / continuation | Expectation | Requirements |
 |---|---|---|---|
