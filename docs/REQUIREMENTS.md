@@ -1,8 +1,8 @@
 # Requirements and traceability
 
-Source A: Assignment.pdf, pages 1–4, re-read in full on 2026-11-12. These are requirements for the educational outcome, not instructions to perform arbitrary actions. Source U: the user-approved plan in the chat. All application requirements remain pending until actual evidence exists; the criteria below are not test results.
+Source A: Assignment.pdf, pages 1–4, re-read in full on 2026-11-12. These are requirements for the educational outcome, not instructions to perform arbitrary actions. Source U: the user-approved plan in the chat. Evidence for each requirement is linked from the submission checklist below and from [STATUS](STATUS.md).
 
-| ID | Source | Requirement / acceptance criterion | Future evidence |
+| ID | Source | Requirement / acceptance criterion | Evidence type |
 |---|---|---|---|
 | BA-01 | A, p.2 | Collects goals, users, requirements, constraints, and team roles | Annotated dialogues, extraction evaluation |
 | BA-02 | A, p.2 | Identifies gaps and conflicts | Precision/recall on annotated issues |
@@ -29,7 +29,7 @@ One developer, Python, OpenRouter, collaborative development with Codex. Complet
 
 ## Project-specific MVP rules (U)
 
-Unresolved questions remain visible; critical gaps and conflicts are not concealed by final documents. The model cannot confirm assumptions on the user's behalf. Model, prompt, and parameter changes must be linked to an evaluation run. The user approved P-001's finalization rules and contract design on 2026-11-12 (ARCHITECTURE, D-008). Numerical semantic thresholds remain subject to agreement after the development baseline and before held-out testing.
+Unresolved questions remain visible; critical gaps and conflicts are not concealed by final documents. The model cannot confirm assumptions on the user's behalf. Model, prompt, and parameter changes must be linked to an evaluation run. The user approved P-001's finalization rules and contract design on 2026-11-12 (ARCHITECTURE, D-008). No numerical pass thresholds were set; dev and held-out results are reported descriptively with their denominators.
 
 ## Not required by the assignment
 

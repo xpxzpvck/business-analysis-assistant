@@ -26,4 +26,4 @@ Build a small, explainable Python NLP prototype for Assignment.pdf. The develope
 ## Checks
 - Environment: `python scripts/check_environment.py` (standard library only).
 - Whitespace/diff: `git diff --check`; new untracked files require separate inspection.
-- Application setup, lint, tests, evaluation, and run commands are not defined yet. Establish executable commands with the architecture; never claim environment checks test the application.
+- Application: `uv run --frozen pytest -q`, `uv run --frozen ruff check .`, `uv run --frozen python scripts/check_dataset.py`, `uv run --frozen python scripts/check_launch.py`. Full list and live-evaluation commands are in README. Environment checks do not test the application.

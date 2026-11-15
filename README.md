@@ -4,7 +4,7 @@ Python NLP prototype: describe a project, answer clarifications, review extracte
 
 ## Setup and run
 
-Requires uv and Python 3.11+. Verified on Python 3.13.15 in a fresh source-copy environment and previously on 3.14.7.
+Requires uv and Python 3.11+. Verified on a clean clone from GitHub with Python 3.13.15 (Windows); also used with 3.14.7.
 
 ```powershell
 uv sync --frozen
@@ -61,7 +61,7 @@ See the [v2 baseline](evals/runs/components-2026-11-15.md) and the [v2 → v3 it
 | scripts/ | Environment/data/startup checks and export evaluation |
 | evals/data/ | Versioned development and reserved test cases |
 | evals/runs/ | Historical check/experiment records; private traces are ignored |
-| docs/ | Current status, requirements, architecture, report and video script |
+| docs/ | Current status, requirements, architecture, report and diagrams |
 
 The UI export omits transcript and evidence. Session.export_json is an internal full snapshot and should not be treated as a sanitized public document. Downloads are business documents, not anonymized data. There is no implicit .env loading; .env.example contains placeholders only.
 

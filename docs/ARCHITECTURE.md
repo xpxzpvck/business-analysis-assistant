@@ -1,6 +1,6 @@
 # Architecture — current implementation
 
-P-001 was approved on 2026-11-12. Current runtime follows D-015 (clarifications in dialogue) and D-016 (free router). The decision log below preserves earlier choices; superseded rows are not runtime instructions. Paid proposal P-002 was never authorized.
+P-001 was approved on 2026-11-12. Current runtime follows D-015 (clarifications in dialogue), D-016 (free router) and D-018 (v3 prompts). The decision log below preserves earlier choices; superseded rows are not runtime instructions. Paid proposal P-002 was never authorized.
 
 ## Components and boundaries
 
@@ -66,7 +66,7 @@ Conversation content is transmitted to OpenRouter and the selected provider. Loc
 
 ## Verification and walkthrough
 
-Executable commands are maintained in [README](../README.md). Actual run evidence is in [submission checks](../evals/runs/submission-review-2026-11-15.md) and the [component baseline](../evals/runs/components-2026-11-15.md); data and semantic evaluation rules are in [PLAN](../evals/PLAN.md). scripts/evaluate_export checks exported structure only. scripts/evaluate_components runs three reviewed dev snapshots and an optional generator fixture, one free-only call each, records private outputs/selected model/timing and scores category presence after inference. It explicitly reads a local ignored .env for evaluation only. Neither evaluator reconstructs confirmation provenance or provides semantic fact F1. No runtime prompt/model change was made during the baseline.
+Executable commands are maintained in [README](../README.md). Actual run evidence is in the [component baseline v2](../evals/runs/components-2026-11-15.md) and the [v2 → v3 iteration](../evals/runs/components-v3-2026-11-15.md); data and semantic evaluation rules are in [PLAN](../evals/PLAN.md). scripts/evaluate_export checks exported structure only. scripts/evaluate_components runs three dev snapshots (or the reserved test split against a freeze manifest) and an optional generator fixture, one free-only call each, records private outputs/selected model/timing and scores category presence after inference. It explicitly reads a local ignored .env for evaluation only. Neither evaluator reconstructs confirmation provenance or provides semantic fact F1.
 
 The user-supplied example follows: request-tracker brief → questions about fields/access/team → user clarification → human fact review → generation at state 19 → seven specification sections, nine tasks and nine RACI activities covering six requirements. See [REPORT](REPORT.md) for the example, results and limitations. The application itself is not the Django request tracker described in that example.
 

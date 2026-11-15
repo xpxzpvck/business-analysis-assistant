@@ -2,11 +2,7 @@
 
 Current evidence (2026-11-15): [v2 → v3 iteration](runs/components-v3-2026-11-15.md) — prompts changed from the user-approved v2 error findings, sources frozen, same dev cases repeated three times and the reserved test run once. Category-presence F1: dev 20% → 71.8% end-to-end (96.6% on successful calls), test 76.9%; generator 2/7 attempts fully valid. Provider availability (429/400/truncation) is now the main failure. All 12 annotations are now user-approved (labels unchanged after the run). [v2 baseline](runs/components-2026-11-15.md) is retained; failures are retained. Older baseline notes below describe earlier work.
 
-Status: first [offline core baseline](runs/core-baseline-2026-11-15.md) executed; no model runs yet. Architecture P-001 is approved and maps the capabilities below to components. Structural baseline: 28 domain tests plus 7 dataset checks passed; this is not an NLP score.
-
-The [provider adapter baseline](runs/adapter-baseline-2026-11-15.md) adds 34 mocked HTTP cases (69 total tests passing). No live model calls or NLP scores exist yet.
-
-The [prompt/workflow baseline](runs/workflow-baseline-2026-11-15.md) records prompt hashes and scripted multi-turn integration (80 total passing tests). Semantic prompt evaluation is not run; its development evaluation design is recorded there.
+Earlier offline increments (historical): [core](runs/core-baseline-2026-11-15.md), [provider adapter](runs/adapter-baseline-2026-11-15.md) and [prompt/workflow](runs/workflow-baseline-2026-11-15.md) baselines built the structural test suite before any live model run.
 
 Data preparation produced [draft corpus v0.1 and its review packet](data/README.md): 8 dev and 4 reserved test analyzer snapshots. The user approved representative interpretations for DEV-S02, DEV-S03 and DEV-S06 on 2026-11-12 and the remaining nine on 2026-11-15 without changes. `python scripts/check_dataset.py` checks data integrity only; it is not the planned NLP evaluation runner.
 
@@ -75,7 +71,7 @@ Downloaded only `requirements.csv` and `interviews_json.zip` from the v2 record 
 
 ### Preparation contract and phase exit
 
-DATA-01's search-before-synthesis condition is satisfied by this recorded inspection. Data understanding exits with the above selection and gaps; Data preparation is not complete and no dataset is yet ready for scoring.
+DATA-01's search-before-synthesis condition is satisfied by this recorded inspection. Data understanding exits with the above selection and gaps. (At that date data preparation was not complete; dataset v0.1 was finished afterwards and all 12 annotations were reviewed by 2026-11-15.)
 
 1. Adapt a small LLMREI subset into development examples only. Verify codes, remove source-system instructions, inspect content before any external model use, preserve source IDs/turn positions, record DOI/license/hashes and adaptation notes. Manually label only facts visible up to each evaluated turn.
 2. Retain S01–09 as development/regression cases; they have already influenced design and cannot be held-out tests. Create original cases for Ukrainian input, conflicts, partial answers, correction of confirmed facts, unsupported proposals, finalization and linked artifacts. Mark synthetic provenance explicitly; never present generated cases as collected customer data.
